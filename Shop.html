@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Plushie Shop</title>
+    <link rel="stylesheet" href="w2015878(2)_styles.css">
+
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-img"> 
+            Tech4
+        </div>
+        <a href="https://w1947522.users.ecs.westminster.ac.uk/tech4/home.html">Home</a>
+        <a href="https://w2021833.users.ecs.westminster.ac.uk/tech4/gallery.html">Gallery</a>
+        <a href="https://w2015878.users.ecs.westminster.ac.uk/tech4/Shop.html" class="active">Shop</a>
+        <a href="https://w1994669.users.ecs.westminster.ac.uk/tech4/profile.html">User Profile</a>
+        <a href="https://w1947522.users.ecs.westminster.ac.uk/tech4/feedback.html">Feedback</a>
+        <a href="https://w2021833.users.ecs.westminster.ac.uk/tech4/sitemap.html">Site Map</a>
+        <a href="https://w1994669.users.ecs.westminster.ac.uk/tech4/team.html">Team</a>
+    </div>
+    <h1 class="title">Plush & Co.</h1>
+    <div class="area">
+        <div id="items">
+        
+            <div class="item">
+                <img src="koala.jpg" alt="Koala Plushie" id="kpic">
+                <h2 id="koalatext">Koala Plushie</h2>
+                <p id="koalatext2">A cute koala plushie for cuddling and to play with.<b> Price: $29.99</b></p>
+                <p>&#9733; &#9733; &#9733; &#9733; &#9734;</p>
+                <button class="add-to-basket-button" onclick="addToBasket('Koala Plushie', 29.99)">Add to Basket</button>
+            </div>
+            <div class="item">
+                <img src="Giraffe-.jpeg" alt="Giraffe Plushie" id="gpic">
+                <h2 id="giraffetext">Giraffe Plushie</h2>
+                <p id="giraffetext2">A cute giraffe plushie for cuddling and to play with.<b> Price:<del>$29.99</del> $20.99 </b></p><span class="sale-tag">SALE</span>
+                <p>&#9733; &#9733; &#9733; &#9734; &#9734;</p>
+                <button class="add-to-basket-button" onclick="addToBasket('Giraffe Plushie', 20.99)">Add to Basket</button>
+            </div>
+            
+            <div class="item">
+                <img src="hedgehog.webp" alt="Hedgehog Plushie" id="hpic">
+                <h2 id="hedgetext">Hedgehog Plushie</h2>
+                <p id="hedgetext2">A cute hedgehog plushie for cuddling and to play with.<b> Price: <del>$35.99</del>$30.99 </b></p><span class="sale-tag">SALE</span>
+                <p>&#9733; &#9733; &#9733; &#9733; &#9734;</p>
+                <button class="add-to-basket-button" onclick="addToBasket('Hedgehog Plushie', 30.99)">Add to Basket</button>
+            </div>
+            <div class="item">
+                <img src="bee.jpeg" alt="Bee Plushie" >
+                <h2 id="beetext">Honey Bee Plushie</h2>
+                <p id="beetext2">A cute Bee plushie for cuddling and to play with. <b>Price: $19.99</b></p>
+                <p>&#9733; &#9733; &#9733; &#9734; &#9734;</p>
+                <button class="add-to-basket-button" onclick="addToBasket('Honey Bee Plushie', 19.99)">Add to Basket</button>
+            </div>
+            <div class="item">
+                <img src="lepp.webp" alt="Snow Leopard Plushie" >
+                <h2>Snow Leopard Plushie</h2>
+                <p>A cute Snow Leopard plushie for cuddling and to play with. <b>Price: $29.99</b></p>
+                <p>&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <button class="add-to-basket-button" onclick="addToBasket('Snow Leopard Plushie', 29.99)">Add to Basket</button>
+            </div>
+            <div class="item">
+                <img src="bbunny.jpeg" alt="fox Plushie" >
+                <h2>Bugs Bunny Plushie</h2>
+                <p> Bugs Bunny plushie special edition. <b> Price: $44.99</b></p><span class="premium">PREMIUM</span>
+                <p>&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <button class="add-to-basket-button" onclick="addToBasket('Buggs Bunny', 44.99)">Add to Basket</button>
+            </div>
+            <div class="item">
+                <img src="duck.webp" alt="fox Plushie" >
+                <h2>Daffy Duck Plushie</h2>
+                <p>A cute Daffy Duck plushie for cuddling and to play with.<b> Price: $39.99</b></p><span class="premium">PREMIUM</span>
+                <p>&#9733; &#9733; &#9733; &#9733; &#9734;</p>
+                <button class="add-to-basket-button" onclick="addToBasket('Daffy Duck Plushie', 39.99)">Add to Basket</button>
+            </div>
+            <div class="item">
+                <img src="fox.webp" alt="Fox Plushie" >
+                <h2>Red Fox Plushie</h2>
+                <p>A cute Fox plushie for cuddling and to play with.<b> Price: $34.99</b></p>
+                <p>&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <button class="add-to-basket-button" onclick="addToBasket('Red Fox Plushie', 34.99)">Add to Basket</button>
+            </div>
+            <div class="item">
+                <img src="rainbo.jpeg" alt="Rainbow Plushie" >
+                <h2>Rainbow Plushie</h2>
+                <p>  A viberant rainbow plushie for cuddling.<b>Price:<del>$25.99</del> $16.99</b></p><span class="sale-tag">SALE</span>
+                <p>&#9733; &#9733; &#9733; &#9734; &#9734;</p>
+                <button class="add-to-basket-button" onclick="addToBasket('Rainbow Plushie', 16.99)">Add to Basket</button>
+            </div>
+        </div>
+        <div id="basket-container">
+            <div class="basket-container">
+                <h2>Basket</h2>
+                <div id="basketItems"></div>
+            </div>
+            <div id="totalNclear">
+                
+                <p>Note: For express delivery we charge extra $10 for express delivery</p>
+                <p id="totalPrice">Total: $0</p>
+            </div>
+            <div class="checkandxpress">
+                <button id='clearbasket' onclick="emptyBasket()">Clear Basket</button>
+                <button id="checkoutbtn" onclick="checkout()"><a href="https://w2015878.users.ecs.westminster.ac.uk/tech4/checkoutpage.html" style="color: white; text-decoration: none;"> Checkout </a></button>
+                <label for="xpressdel">Express Delivery</label>
+                <input type="checkbox" name="checkbox" id="xpressdel" onchange="expressdelivery()">
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="pageEditor_ST2.html">Shoaib Farooq</a></li>
+                <li><a href="https://w2021833.users.ecs.westminster.ac.uk/tech4/pageEditor_ST4.html">Simone Pietraroia</a></li>
+                <li><a href="https://w2015878.users.ecs.westminster.ac.uk/tech4/page_editor.html"> Muhammad Khizr</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        let basket = [];
+        let itemQuantity = document.getElementById("itemnumber");
+        let checkoutURL = "/Users/khizarr/HTML THINGS/checkout.html";
+        let checkboxdel = document.getElementById("xpressdel");
+        let extracharge = 0;
+        let total = 0; // Declare total variable
+    
+        function expressdelivery(){
+            console.log("Express delivery checkbox state changed");
+
+            if (checkboxdel.checked){
+                extracharge = 10; // Set extracharge when checked
+            } else {
+                extracharge = 0; // Reset extracharge when unchecked
+            }
+            updateBasket(); // Update basket summary
+        }
+    
+        function addToBasket(itemName, price) {
+            const item = basket.find(item => item.name === itemName);
+            if (item) {
+                item.quantity++;
+            } else {
+                basket.push({ name: itemName, price: price, quantity: 1 });
+            }
+            updateBasket();
+        }
+    
+        function updateBasket() {
+            const basketItems = document.getElementById('basketItems');
+            const totalPrice = document.getElementById('totalPrice');
+            basketItems.innerHTML = '';
+            total = 0; // Reset total before calculating
+    
+            basket.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.textContent = `${item.name} x${item.quantity}`;
+                basketItems.appendChild(itemElement);
+                total += item.price * item.quantity;
+            });
+    
+            // Add extra charge if express delivery is selected
+            total += extracharge;
+    
+            totalPrice.textContent = `Total: $${total}`;
+        }
+    
+        function checkout() {
+            if(basket.length===0){
+                alert('Please add any item to your basket before checking out!')
+            } else {
+                alert('Thank you for your purchase!');
+                basket = [];
+                updateBasket();
+                window.location.href=checkoutURL;
+            } 
+        }
+        function getSelectedValue( selectList ) {
+            return selectList[ selectList.selectedIndex ].value;
+        }
+        document.getElementById("options").addEventListener("change", changeCAT);
+        function changeCAT(){
+            alert("you changed catagories")
+            let plushoptions = getSelectedValue(form.catagories);
+
+            if(plushoptions.indexOf("Premiums")){
+
+
+
+            }
+
+        }
+        function emptyBasket() {
+            // Clear the basket array
+            basket = [];
+            // Update the basket display
+            updateBasket();
+        }
+
+    </script>
+    
+    
+</body>
+</html>

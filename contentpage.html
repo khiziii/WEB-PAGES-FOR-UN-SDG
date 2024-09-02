@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content with Pictures</title>
+    <style>
+        .contentpage {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            color: #142e49;
+        }
+
+        .heading {
+            text-align: center;
+            margin: 50px auto;
+            width: 80%;
+            padding: 20px;
+            background-color: whitesmoke;
+            
+            border-radius: 8px;
+            font-family: 'Times New Roman', serif;;
+        }
+
+        .topofpage {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .scroll-target {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #142e49;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .scroll-target:hover {
+            background-color: #255990;
+        }
+
+        .contentcontain {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .content {
+            
+            display: flex;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            overflow-wrap:normal;
+            width: 8%;
+            padding: 2%;
+            padding-top: 3%;
+            position: relative;
+            font-family: 'Times New Roman', serif;;
+            color: #142e49;
+        }
+
+        .content p {
+            margin-left: 2%;
+            margin-right: 2%;
+            overflow-wrap: break-word;
+            width:60%;
+            padding-top: 3%;
+            position: relative;
+            font-family: 'Times New Roman', serif;;
+        }
+
+        .image {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: #000000; 
+            line-height: 40px; 
+            float: left; 
+            margin-right: 20px; 
+            margin-top: 0px;
+        }
+        .logo-img {
+            width: 40px; 
+            height: auto; 
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+
+
+
+
+        .navbar {
+            overflow: hidden;
+            background-color: #f0f0f0d5;
+            border-bottom: 1px solid #ddd;
+            position: fixed; 
+            width: 100%;
+            top: 0; 
+            left: 0; 
+            z-index: 1000; 
+            padding: 10px 20px; 
+            box-sizing: border-box; 
+            text-align: right;
+        }
+
+/* Navbar links */
+        .navbar a {
+            color: #000; 
+            text-decoration: none;
+            margin-left: 5px; 
+            transition: color 0.3s ease;
+            line-height: 40px; 
+            padding: 10px 20px; 
+        }
+
+        .navbar a.active {
+            color: #000000;
+            border-bottom: 2px solid #000000; 
+        }
+
+        .navbar a:hover {
+            color: #ffffff;
+            background-color: black;
+        }
+
+
+        footer {
+            background-color: #f0f0f0d5;
+            padding: 10px;
+            text-align: center;
+            width: 100%; 
+            position: static; 
+            box-sizing: border-box;
+            z-index: 1000;
+    
+        }
+
+
+        footer nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer nav ul li {
+            display: inline-block;
+            margin-right: 20px; 
+        }
+
+        footer nav ul li a {
+            color: #000000; 
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 5px; 
+            transition: color 0.3s ease; 
+          padding: 10px 20px;
+        }
+
+        footer nav ul li a:hover {
+            color: #ffffff; 
+            background-color: black; 
+        }
+    </style>
+</head>
+
+<body class="contentpage">
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-img"> 
+            Tech4
+        </div>
+        <a href="https://w1947522.users.ecs.westminster.ac.uk/tech4/home.html" >Home</a>
+        <a href="https://w2021833.users.ecs.westminster.ac.uk/tech4/gallery.html">Gallery</a>
+        <a href="https://w2015878.users.ecs.westminster.ac.uk/tech4/shop.html">Shop</a>
+        <a href="https://w1994669.users.ecs.westminster.ac.uk/tech4/profile.html">User Profile</a>
+        <a href="https://w1947522.users.ecs.westminster.ac.uk/tech4/feedback.html">Feedback</a>
+        <a href="https://w2021833.users.ecs.westminster.ac.uk/tech4/sitemap.html">Site Map</a>
+        <a href="https://w1994669.users.ecs.westminster.ac.uk/tech4/team.html">Team</a>
+    </div>
+    <div class="heading">
+        <h1>Confronting Climate Catastrophe: Rallying for Change</h1>
+        <p>Join the Global Movement to Combat Climate Change and Safeguard Our Planet's Future.</p>
+    </div>    
+    <div class="topofpage">
+        
+        <!-- Scroll target container -->
+        <button class="scroll-target" onclick="scrollToTarget('energy')">Transition to Renewable Energy</button>
+        <button class="scroll-target" onclick="scrollToTarget('efficiency')">Increase Energy Efficiency</button>
+        <button class="scroll-target" onclick="scrollToTarget('Protect')">Protect and Restore Ecosystems</button>
+        <button class="scroll-target" onclick="scrollToTarget('landuse')">Adopt Sustainable Agriculture and Land Use</button>
+    </div>
+<div class="contentcontain">
+    <div class="content" id="energy">
+        <h2>Transition to Renewable Energy:</h2>
+        <p>Combating climate change necessitates a comprehensive and coordinated effort across all sectors. One essential solution is to shift to renewable energy sources like solar, wind, hydropower, and geothermal power, which can dramatically cut greenhouse gas emissions. This transformation requires not just investment in R&D to improve renewable energy technology, but also the implementation of laws and incentives to encourage their use.</p>
+        <div class="image">
+            <img src="renewenergy.jpeg" alt="energy pic">
+        </div>
+    </div>
+</div>
+
+<div class="contentcontain">
+    <div class="content" id="efficiency">
+        <h2>Increase Energy Efficiency:</h2>
+        <p>Improving energy efficiency in buildings, transportation networks, industrial operations, and household appliances is crucial to lowering energy consumption and greenhouse gas emissions. Initiatives promoting energy-efficient building designs, retrofitting existing structures with energy-saving technologies, and subsidizing the use of fuel-efficient automobiles and public transit are critical components of this effort. Education and outreach initiatives can raise public awareness about the need of energy conservation and enable people to make more sustainable decisions in their daily lives.</p>
+        <div class="image">
+            <img src="efficiency.png" alt="efficency pic">
+        </div>
+    </div>   
+</div>
+<div class="contentcontain">
+    <div class="content" id="Protect">
+        <h2>Protect and Restore Ecosystems:</h2>
+        <p>Preserving and rebuilding ecosystems such as forests, wetlands, mangroves, and grasslands is critical for reducing climate change. These natural habitats act as crucial carbon sinks, absorbing and storing large amounts of atmospheric CO2. Implementing sustainable land management strategies, such as reforestation, afforestation, and enhanced forest management, can help with carbon sequestration and biodiversity protection. Furthermore, protecting sensitive ecosystems from deforestation, degradation, and urban encroachment is critical for maintaining ecological integrity and resistance to climate change impacts.</p>
+        <div class="image">
+            <img src="ecosystems.jpeg" alt="eco pic">
+        </div>
+    </div>    
+</div>
+<div class="contentcontain" >
+    <div class="content" id="landuse">
+        <h2>Adopt Sustainable Agriculture and Land Use:</h2>
+        <p>Transforming agricultural methods and food systems towards sustainability is critical for combating climate change and guaranteeing global food security. Sustainable agriculture approaches, such as organic farming, agroforestry, and regenerative agriculture, improve soil health, increase carbon sequestration, and lower greenhouse gas emissions from agricultural activities. Encouraging the use of climate-smart agricultural techniques, encouraging plant-based diets, and decreasing food waste throughout the supply chain are all important steps toward creating a more resilient and sustainable food system. Collaboration among politicians, farmers, consumers, and food sector stakeholders is critical in addressing the complex issues posed by climate change and creating a more sustainable future for all.</p>
+        <div class="image">
+            <img src="agri.jpeg" alt="agri pic">
+        </div>
+    </div>    
+</div>
+<footer>
+    <nav>
+        <ul>
+            <li><a href="pageEditor_ST2.html">Shoaib Farooq</a></li>
+            <li><a href="https://w2021833.users.ecs.westminster.ac.uk/tech4/pageEditor_ST4.html">Simone Pietraroia</a></li>
+            <li><a href="https://w2015878.users.ecs.westminster.ac.uk/tech4/pageEditor_ST1.html">Muhammad Khizr </a></li>
+        </ul>
+    </nav>
+</footer>
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scrolling
+            });
+        }
+        window.onscroll = function() {
+            var button = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        }
+        function scrollToTarget(targetId) {
+            var targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
